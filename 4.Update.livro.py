@@ -1,11 +1,10 @@
 import mysql.connector
-from datetime import datetime
 
 conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='191102',
-    database='trabalho',
+    password='',
+    database='',
 )
 #UPDATE
 cursor = conexao.cursor()
