@@ -16,7 +16,6 @@ while True:
     if (alterar==1):
         cursor = conexao.cursor()
         nome=str(input("Digite o novo nome: "))
-        cpf= "15151975498"
         up = f' UPDATE cliente SET nome= "{nome}" WHERE cpf=  "{cpf}"'
         cursor.execute(up)
         conexao.commit()
@@ -25,7 +24,6 @@ while True:
         cursor = conexao.cursor()
         data_em_texto = str(input("Digite o nova data de nascimento: (em formato de texto exemplo: dd/mm/YYYY)"))
         data_nasc = datetime.strptime(data_em_texto, '%d/%m/%Y').date()
-        cpf = "15151975498"
         up = f' UPDATE cliente SET data_nasc= "{data_nasc}" WHERE cpf=  "{cpf}"'
         cursor.execute(up)
         conexao.commit()
@@ -33,7 +31,6 @@ while True:
     elif (alterar==3):
         cursor = conexao.cursor()
         contato = int(input("Digite o novo número de contato: "))
-        cpf = "15151975498"
         up = f' UPDATE cliente SET contato= "{contato}" WHERE cpf=  "{cpf}"'
         cursor.execute(up)
         conexao.commit()
