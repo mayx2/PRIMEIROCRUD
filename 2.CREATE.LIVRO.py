@@ -1,5 +1,5 @@
 import mysql.connector
-from datetime import datetime
+
 
 conexao = mysql.connector.connect(
 
