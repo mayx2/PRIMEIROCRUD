@@ -9,10 +9,10 @@ conexao = mysql.connector.connect(
 while True:
     cursor = conexao.cursor()
 
-    id = int (input('Qual é o id da linha você quer apagar? '))
-    print (id)
+    cpf = int (input('Qual é o cpf do cliente que você deseja apagar o cadastro? '))
+    print (cpf)
 
-    comando = f'DELETE FROM cliente WHERE idCliente= "{id}"'
+    comando = f'DELETE FROM cliente WHERE cpf= "{cpf}"'
     cursor.execute(comando)
     conexao.commit()
     print ('LINHA EXCLUÍDA ')
