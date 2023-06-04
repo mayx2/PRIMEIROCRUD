@@ -9,7 +9,7 @@ conexao = mysql.connector.connect(
 )
 cursor = conexao.cursor()
 while True:
-    print ('DIGITE AS INFORMAÇÕES DO CLIENTE PARA ADICIONA-LAS À TABELA DE CADASTRO DA BIBLIOTECA... ')
+    print ('DIGITE AS INFORMAÇÕES DO CLIENTE PARA FAZER O CADASTRO... ')
 
     nome = str (input('Qual o nome do cliente? '))
 
