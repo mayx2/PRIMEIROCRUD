@@ -9,7 +9,7 @@ conexao = mysql.connector.connect(
 cursor = conexao.cursor()
 while True:
 
-    a=int (input("\nVocê quer pesquisar uma pessoa especifica ou ou exibir todos os clientes? Digite 1 para uma pessoa e 2 para todos "))
+    a=int (input("\nVocê quer pesquisar um livro especifico ou exibir todos os livros? Digite 1 para um livro especifico e 2 para todos "))
 
 
     if (a==1):
@@ -22,7 +22,8 @@ while True:
             print ("\nEsses são os dados da livro de codigo '", codigo_do_livro,"':\n", tabelalivro)
 
         else:
-            titulo = str(input('Qual é o nome do livro que você quer consultar? '))
+            x = str(input('Qual é o nome do livro que você quer consultar? '))
+            titulo = x.upper()
             comando = f'SELECT * FROM livros WHERE titulo= "{titulo}"'
             cursor.execute(comando)
             tabelalivro = cursor.fetchall()  # exibe dados
@@ -42,8 +43,5 @@ while True:
     else:
      print("TUDO BEM")
      break
-
-cursor.close()
-conexao.close()
 
 
