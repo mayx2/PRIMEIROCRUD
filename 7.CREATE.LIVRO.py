@@ -5,15 +5,16 @@ conexao = mysql.connector.connect(
 
     host='localhost',
     user='root',
-    password='',
-    database='',
+    password='191102',
+    database='trabalho',
 )
 cursor = conexao.cursor()
 while True:
 
     print("CADASTRO DO LIVRO: ")
     codigo_do_livro = int (input("Digite o codigo do livro? "))
-    titulo = str (input("Digite o titulo do livro? "))
+    x = str (input("Digite o titulo do livro? "))
+    titulo = x.upper()
     numero_de_paginas = int (input("Digite o número de paginas do livro? "))
     editora=str (input("Digite o nome da editora do livro? "))
     autor=str (input("Digite o nome do autor do livro? "))
